@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantômes : retrouve les abonnements que tu paies sans t’en servir</title>
+<meta name="description" content="Envoie ton relevé bancaire. Tu reçois la liste de tes abonnements oubliés, classés par coût annuel, avec une lettre de résiliation prête pour chacun. 19 €, remboursé si tu ne trouves rien.">
+<meta property="og:title" content="Fantômes : retrouve les abonnements que tu paies sans t’en servir">
+<meta property="og:description" content="Liste classée par coût annuel + lettres de résiliation prêtes. 19 €, satisfait ou remboursé.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#12332D">
+<style>
+:root{--vert:#12332D;--jaune:#FFD23F;--fond:#F6F7F4;--texte:#16201E;--gris:#5C6866;--trait:#DADFDA}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--fond);color:var(--texte);line-height:1.55;font-size:17px;padding-bottom:84px}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;line-height:1.12;letter-spacing:-.01em}
+header{background:var(--vert);color:#fff;padding:28px 0 36px}
+.logo{font-family:Georgia,serif;font-weight:700;font-size:18px;margin-bottom:28px;color:var(--jaune)}
+h1{font-size:34px;font-weight:700;margin-bottom:16px}
+.sub{color:#CFE0DB;margin-bottom:24px}
+.btn{display:block;text-align:center;background:var(--jaune);color:var(--vert);font-weight:700;font-size:18px;text-decoration:none;padding:17px 20px;border-radius:10px;min-height:56px}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.note{font-size:14px;color:#CFE0DB;margin-top:10px;text-align:center}
+section{padding:36px 0;border-bottom:1px solid var(--trait)}
+h2{font-size:26px;margin-bottom:14px}
+.chiffre{background:#fff;border-left:5px solid var(--jaune);padding:16px 18px;border-radius:0 10px 10px 0}
+.chiffre strong{font-size:28px;font-family:Georgia,serif;color:var(--vert)}
+.chiffre small{display:block;color:var(--gris);font-size:14px;margin-top:6px}
+ul.b{list-style:none;padding:0}
+ul.b li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid var(--trait)}
+ul.b li:last-child{border:0}
+ul.b li::before{content:"";position:absolute;left:0;top:19px;width:14px;height:14px;background:var(--jaune);border:2px solid var(--vert);border-radius:50%}
+.prix{background:var(--vert);color:#fff;border-radius:14px;padding:24px 20px;margin-top:8px}
+.prix .p{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--jaune);line-height:1}
+.prix p{color:#CFE0DB;margin:8px 0 16px}
+.garantie{background:#fff;border:2px solid var(--vert);border-radius:12px;padding:16px 18px;margin-top:20px}
+.garantie b{display:block;margin-bottom:4px}
+details{border-bottom:1px solid var(--trait);padding:14px 0}
+summary{font-weight:600;cursor:pointer;min-height:28px}
+details p{color:var(--gris);margin-top:8px}
+footer{padding:28px 0;font-size:14px;color:var(--gris)}
+footer a{color:var(--gris)}
+.legal h3{font-size:16px;margin:14px 0 4px;color:var(--texte)}
+.todo{background:#FFF3B8;padding:0 3px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--trait);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .btn{max-width:520px;margin:0 auto;padding:13px 20px;min-height:50px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">Fantômes</div>
+<h1>Tu paies peut-être des abonnements que tu n’utilises plus.</h1>
+<p class="sub">Envoie ton relevé bancaire. Tu reçois la liste de tes abonnements oubliés, classés par coût sur l’année, et une lettre de résiliation prête pour chacun.</p>
+<a class="btn" href="https://buy.stripe.com/test_14AaEY5Zm6nc3uR9APc7u00">Commencer mon audit, 19 €</a>
+<p class="note">Satisfait ou remboursé · Paiement sécurisé par Stripe</p>
+</div></header>
+
+<main class="wrap">
+<section>
+<h2>Petits prélèvements, grosse facture</h2>
+<div class="chiffre"><strong>324 € par an</strong>
+Exemple : 3 abonnements oubliés à 9 € par mois. Sur un relevé, ça ressemble à rien. Sur un an, c’est un week-end.
+<small>Exemple chiffré pour illustrer. Ton audit montre tes vrais montants.</small></div>
+<p style="margin-top:14px">Un essai jamais résilié, un service remplacé, une option activée une fois : ils tournent pendant des années parce qu’ils sont petits.</p>
+</section>
+
+<section>
+<h2>Ce que tu reçois</h2>
+<ul class="b">
+<li><b>La liste de tes prélèvements réguliers</b>, classés par montant annuel : les plus coûteux en premier.</li>
+<li><b>Une lettre de résiliation prête</b> pour chaque abonnement. Tu l’envoies, c’est fini.</li>
+<li><b>Le total que tu économises</b> sur l’année, si tu résilies.</li>
+</ul>
+</section>
+
+<section id="acheter">
+<h2>Comment ça se passe</h2>
+<p>1. Tu paies 19 € (une fois, pas d’abonnement).<br>2. Tu envoies ton relevé par email (PDF ou CSV).<br>3. Tu reçois ton audit complet sous 24 h.</p>
+<div class="prix">
+<div class="p">19 €</div>
+<p>Une seule fois. Moins que la plupart des abonnements oubliés que tu paies chaque mois.</p>
+<a class="btn" href="https://buy.stripe.com/test_14AaEY5Zm6nc3uR9APc7u00">Obtenir mon audit</a>
+<p class="note" style="margin-bottom:0">Aucun abonnement, aucun engagement.</p>
+</div>
+<div class="garantie"><b>Garantie satisfait ou remboursé, 14 jours</b>
+Si l’audit ne te convient pas, écris-nous dans les 14 jours après réception. Tu es remboursé de 19 € sous 5 jours ouvrés, sans justification.</div>
+</section>
+
+<section>
+<h2>Questions fréquentes</h2>
+<details><summary>Est-ce que ça marche avec ma banque ?</summary><p>Oui, avec toutes les banques : il suffit d’un relevé en PDF ou en CSV, que tu télécharges depuis ton espace client.</p></details>
+<details><summary>Combien de temps ça me prend ?</summary><p>Environ 5 minutes pour envoyer ton relevé. Tu reçois ton audit sous 24 h.</p></details>
+<details><summary>Et si je veux arrêter ?</summary><p>Il n’y a rien à arrêter : c’est un paiement unique. Et si l’audit ne te convient pas, tu es remboursé.</p></details>
+<details><summary>À quoi sert exactement ce que je paie ?</summary><p>À une analyse de ton relevé : la liste de tes abonnements réguliers, classés par coût annuel, avec une lettre de résiliation pour chacun.</p></details>
+<details><summary>Que deviennent mes données ?</summary><p>Ton relevé sert uniquement à préparer ton audit. Voir la politique de confidentialité en bas de page.</p></details>
+</section>
+</main>
+
+<footer><div class="wrap legal">
+<p><a href="#mentions">Mentions légales</a> · <a href="#cgv">CGV</a> · <a href="#confidentialite">Confidentialité</a></p>
+<div id="mentions"><h3>Mentions légales</h3>
+<p>Éditeur : <span class="todo">[PRÉNOM NOM]</span>, entrepreneur individuel, SIRET <span class="todo">[SIRET]</span>, <span class="todo">[ADRESSE]</span>. Contact : <span class="todo">[TON-EMAIL]</span>. TVA non applicable, art. 293 B du CGI. Hébergeur : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p></div>
+<div id="cgv"><h3>Conditions générales de vente</h3>
+<p>Service : analyse d’un relevé bancaire fourni par le client et remise d’une liste d’abonnements avec lettres de résiliation. Prix : 19 € TTC, payés en une fois via Stripe. Livraison par email sous 24 h après réception du relevé. Rétractation : le client peut demander le remboursement dans les 14 jours suivant la réception de l’audit, par email à <span class="todo">[TON-EMAIL]</span> ; remboursement sous 5 jours ouvrés. Médiation : <span class="todo">[MÉDIATEUR DE LA CONSOMMATION À CHOISIR]</span>.</p></div>
+<div id="confidentialite"><h3>Politique de confidentialité</h3>
+<p>Responsable : <span class="todo">[PRÉNOM NOM]</span>. Données traitées : email et relevé bancaire envoyés par le client, uniquement pour réaliser l’audit. Le relevé est supprimé 
